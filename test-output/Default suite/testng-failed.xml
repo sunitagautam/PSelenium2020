@@ -5,6 +5,7 @@
     <classes>
       <class name="com.promoapp.qa.testcases.LoginPageTest">
         <methods>
+          <include name="loginageTitleTest"/>
           <include name="setup"/>
           <include name="promoapplogo"/>
           <include name="logintest"/>
