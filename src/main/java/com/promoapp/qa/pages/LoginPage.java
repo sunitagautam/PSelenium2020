@@ -29,11 +29,14 @@ public class LoginPage extends BaseTest {
 	@FindBy(xpath="//img[@class='img-responsive header-logo pa-cursor-pointer']")
 	WebElement Promologo;
 	
+	
 	// Intializing the Page Objects
 	
 	public LoginPage() {  //constructor
 		PageFactory.initElements(driver,this);
 	}
+	//utilization of webelements
+	
 	
 	public String validateloginpagetitle() {
 		return driver.getTitle();
@@ -49,14 +52,33 @@ public class LoginPage extends BaseTest {
 		action.moveToElement(Headerloginbtn).build().perform();
 		
 	}
+	public void login() {
+		username.sendKeys("test.sgautam@gmail.com");
+		password.sendKeys("Gautam@123");
+		loginbtn.click();
+		
+	}
 
-	public HomePage loginn(String un, String pw) {
+	public HomePage login(String un, String pw) {
 		Headerloginbtn.click();
 		username.sendKeys(un);
 		password.sendKeys(pw);
 		loginbtn.click();
 		return new HomePage();
 	}
+	public void setUsername(String un)
+	 {
+		username.sendKeys(un);
+	  }
+	public void setPassword(String pw)
+	 {
+		password.sendKeys(pw);
+	 }
+	
+	public void clickOnLoginBTN()
+	 {
+		loginbtn.click();
+	 }
 
 
 }

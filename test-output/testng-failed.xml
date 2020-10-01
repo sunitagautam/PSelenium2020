@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <parameter name="sBrowser" value="chrome"/>
     <classes>
-      <class name="com.promoapp.qa.testcases.LoginPageTest">
+      <class name="com.promoapp.qa.testcases.TestLoginPage">
         <methods>
-          <include name="loginageTitleTest"/>
-          <include name="setup"/>
-          <include name="promoapplogo"/>
-          <include name="logintest"/>
-          <include name="teardown"/>
+          <include name="closeBrowser"/>
+          <include name="ab"/>
+          <include name="openBrowser"/>
+          <include name="login_Test"/>
+          <include name="openApplication"/>
         </methods>
-      </class> <!-- com.promoapp.qa.testcases.LoginPageTest -->
+      </class> <!-- com.promoapp.qa.testcases.TestLoginPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

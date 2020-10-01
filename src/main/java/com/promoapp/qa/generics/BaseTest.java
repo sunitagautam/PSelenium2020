@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -74,7 +75,11 @@ abstract public class BaseTest implements IAutoConstant
 		driver.close();
 	}
 	
-	@AfterSuite
+	@AfterClass
+		public void ab(){
+			
+		}
+	
 	public void printReport()
 	{
 		Reporter.log("PassCount:"+passCount,true);

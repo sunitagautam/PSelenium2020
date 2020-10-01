@@ -10,7 +10,7 @@ public interface IAutoConstant
 	
 	String GECKO_VALUE = "./driver/geckodriver.exe";
 	
-	String URL = "https://test.thepromoapp.com/#!/";
+	String URL = "https://thepromoapp.com/#!/login";
 	
 	String READ_XL_DATA = "./testData/input.xlsx";
 	
